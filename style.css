@@ -430,46 +430,46 @@ background-attachment: fixed;
     }
   }
 
-  .hero-banner-highlight {
-    color: var(--primary);
-    font-weight: 800;
-  }
+.hero-banner-highlight {
+  color: var(--primary);
+  font-weight: 800;
+}
 
+.hero-break-desktop {
+  display: none;
+}
+
+@media (min-width: 640px) {
   .hero-break-desktop {
-    display: none;
+    display: inline;
   }
+}
 
-  @media (min-width: 640px) {
-    .hero-break-desktop {
-      display: inline;
-    }
-  }
+.hero-banner-paragraph {
+  max-width: 24rem;
+  margin: 0 auto 1.5rem;
+  color: #d1d5db;
+  font-size: 1.05rem;
+}
 
-  .hero-banner-paragraph {
-    max-width: 24rem;
-    margin: 0 auto 1.5rem;
-    color: #d1d5db;
-    font-size: 1.05rem;
-  }
+.hero-banner-actions {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
 
+@media (min-width: 640px) {
   .hero-banner-actions {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 1rem;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
-
-  @media (min-width: 640px) {
-    .hero-banner-actions {
-      -ms-flex-direction: row;
-      flex-direction: row;
-    }
-  }
+}
 
   .hero-banner-button {
     background-color: var(--primary-red);
@@ -551,16 +551,18 @@ background-attachment: fixed;
     width: 25rem;
     max-width: 100%;
     height: auto;
+    margin-top: 40px;
   }
 
   @media (min-width: 1024px) {
     .hero-banner-image {
       width: 31.25rem;
+      margin-top: 120px;
     }
   }
 
   .stats-display-section {
-    max-width: 960px;
+    max-width: 1140px;
     margin: 2.5rem auto;
     position: relative;
     z-index: 10;
@@ -574,7 +576,7 @@ background-attachment: fixed;
 
   @media (min-width: 1024px) {
     .stats-display-section {
-      margin-left: 21.25rem; /* equivalente a lg:ml-[340px] */
+      margin-left: 21.25rem;
       margin-top: -8rem;
     }
   }
@@ -1649,7 +1651,6 @@ background-attachment: fixed;
     color: #fff;
     font-weight: 600;
     border: none;
-    border-radius: 0.5rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
@@ -1881,4 +1882,29 @@ background-attachment: fixed;
       margin-top: 4rem;
     }
   }
+
+  
+.about-section {
+  background-color: #ffffff;
+  padding-top: 4rem;   /* 16 * 0.25rem */
+  padding-bottom: 4rem;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+/* md:py-24 → 768px */
+@media (min-width: 768px) {
+  .about-section {
+    padding-top: 6rem;   /* 24 * 0.25rem */
+    padding-bottom: 6rem;
+  }
+}
+
+/* lg:ml-32 lg:mt-20 → 1024px */
+@media (min-width: 1024px) {
+  .about-section {
+    margin-left: 8rem;  /* 32 * 0.25rem */
+    margin-top: 5rem;   /* 20 * 0.25rem */
+  }
+}
   
