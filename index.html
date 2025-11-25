@@ -1322,30 +1322,34 @@
   
         <div class="contact-form-wrapper">
           <form class="contact-form-grid">
-            <div class="contact-field">
-              <input type="text" id="contact-name" class="contact-input" placeholder=" " required>
-              <label for="contact-name" class="contact-label-floating">Nome Completo</label>
-            </div>
-  
-            <div class="contact-field">
-              <input type="email" id="contact-email" class="contact-input" placeholder=" " required>
-              <label for="contact-email" class="contact-label-floating">Endereço de Email</label>
-            </div>
-  
-            <div class="contact-field" style="grid-column: span 2;">
-              <input type="tel" id="contact-phone" class="contact-input" placeholder=" ">
-              <label for="contact-phone" class="contact-label-floating">Telefone (Opcional)</label>
-            </div>
-  
-            <div class="contact-field" style="grid-column: span 2;">
-              <textarea id="contact-message" class="contact-textarea" placeholder=" " required></textarea>
-              <label for="contact-message" class="contact-label-floating">Sua Mensagem</label>
-            </div>
-  
-            <div style="grid-column: span 2;">
-              <button type="submit" class="contact-submit">Enviar Mensagem</button>
-            </div>
-          </form>
+              <div class="contact-field">
+                <input type="text" id="contact-name" class="contact-input" placeholder=" " required>
+                <label for="contact-name" class="contact-label-floating">Nome Completo</label>
+              </div>
+
+              <div class="contact-field">
+                <input type="email" id="contact-email" class="contact-input" placeholder=" " required>
+                <label for="contact-email" class="contact-label-floating">Endereço de Email</label>
+              </div>
+
+              <div class="contact-field contact-field--full">
+                <input type="tel" id="contact-phone" class="contact-input" placeholder=" ">
+                <label for="contact-phone" class="contact-label-floating">Telefone (Opcional)</label>
+              </div>
+
+              <div class="contact-field contact-field--full">
+                <textarea id="contact-message" class="contact-textarea" placeholder=" " required></textarea>
+                <label for="contact-message" class="contact-label-floating">Sua Mensagem</label>
+              </div>
+
+              <div class="contact-form-footer contact-field--full">
+                <label class="contact-consent">
+                  <input type="checkbox" id="contact-consent" required>
+                  <span>Autorizo o contato da Prevenir e concordo com a política de privacidade.</span>
+                </label>
+                <button type="submit" class="contact-submit">Enviar Mensagem</button>
+              </div>
+            </form>
         </div>
       </div>
   
