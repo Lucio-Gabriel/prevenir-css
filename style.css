@@ -1743,6 +1743,15 @@ background-attachment: fixed;
   #cookie-banner a:hover {
     text-decoration: underline;
   }
+  
+  @media (max-width: 767px) {
+    .termo-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px;
+    }
+  }
 
   /* Área dos botões */
   .cookie-buttons {
