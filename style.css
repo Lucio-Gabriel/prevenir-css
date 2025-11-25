@@ -1696,7 +1696,7 @@ background-attachment: fixed;
 
   .contact-input,
   .contact-textarea {
-    width: 100%;
+    width: 90%;
     padding: 1rem 1rem 0.35rem;
     font-size: 0.95rem;
     border: 1px solid #dbeafe;
@@ -1784,7 +1784,6 @@ background-attachment: fixed;
     color: #fff;
     font-weight: 600;
     border: none;
-    border-radius: 999px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
   }
@@ -2171,7 +2170,8 @@ background-attachment: fixed;
     }
 
     .contact-submit {
-      width: 100%;
+      width: 96%;
+      margin-left: 15px;
     }
 
     .contact-pill-list {
