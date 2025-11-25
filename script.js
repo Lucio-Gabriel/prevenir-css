@@ -23,32 +23,7 @@ const headerBg = document.getElementById("header-bg");
 const navLinks = document.getElementById("nav-links");
 const ctaBtn = document.getElementById("cta-btn");
 
-// window.addEventListener("scroll", () => {
-//     if (window.scrollY > 50) {
-//         Header branco
-//         headerBg.classList.remove("bg-[#2490E3]");
-//         headerBg.classList.add("bg-white");
-
-//         navLinks.classList.remove("text-white");
-//         navLinks.classList.add("text-[#092A49]");
-
-//         ctaBtn.classList.remove("bg-[#092A49]", "text-white");
-//         ctaBtn.classList.add("bg-[#2490E3]", "text-white");
-//     } else {
-//         Header azul original
-//         headerBg.classList.add("bg-[#2490E3]");
-//         headerBg.classList.remove("bg-white");
-
-//         navLinks.classList.add("text-white");
-//         navLinks.classList.remove("text-[#092A49]");
-
-//         ctaBtn.classList.add("bg-[#092A49]", "text-white");
-//         ctaBtn.classList.remove("bg-[#2490E3]");
-//     }
-// });
-
 // ANIMAÇÃO DE CONTAGEM PARA A SEÇÃO DE ESTATÍSTICAS
-
 /**
  * Anima um número de 0 até um valor final dentro de um elemento HTML.
  * @param {HTMLElement} el O elemento (ex: <h3>) que contém o texto a ser animado.
@@ -119,70 +94,29 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(statsSection);
 });
 
-// Modal de serviço
-// const modal = document.getElementById('modal');
-// const modalContent = modal.querySelector('div');
-// const modalTitle = document.getElementById('modal-title');
-// const modalText = document.getElementById('modal-content');
-// const closeBtns = [document.getElementById('closeModalBtn'), document.getElementById('closeModalBtn2')];
-
-// Seleciona todos os botões dos cards
-// document.querySelectorAll('.open-modal').forEach(button => {
-//     button.addEventListener('click', (e) => {
-//         const card = e.target.closest('div[data-title]');
-//         const title = card.getAttribute('data-title');
-//         const content = card.getAttribute('data-content');
-
-//         // Preenche o modal com os dados do card clicado
-//         modalTitle.textContent = title;
-//         modalText.textContent = content;
-
-//         // Mostra o modal
-//         modal.classList.remove('hidden');
-//         setTimeout(() => {
-//             modalContent.classList.remove('opacity-0', 'scale-90');
-//             modalContent.classList.add('opacity-100', 'scale-100');
-//         }, 10);
-//     });
-// });
-
-// Fecha o modal
-// function closeModal() {
-//     modalContent.classList.remove('opacity-100', 'scale-100');
-//     modalContent.classList.add('opacity-0', 'scale-90');
-//     setTimeout(() => {
-//         modal.classList.add('hidden');
-//     }, 200);
-// }
-
-// closeBtns.forEach(btn => btn.addEventListener('click', closeModal));
-
-// modal.addEventListener('click', (e) => {
-//     if (e.target === modal) closeModal();
-// });
-
-// document.addEventListener('keydown', (e) => {
-//     if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
-// });
-
 // modal services
 (function () {
   const modal = document.getElementById("modal");
-  const modalBox = modal.querySelector(".services-modal-box"); // classe nova
+  if (!modal) return;
+
+  const modalBox = modal.querySelector(".services-modal-box");
   const modalTitle = document.getElementById("modal-title");
   const modalContent = document.getElementById("modal-content");
-  const closeBtns = [document.getElementById("closeModalBtn"), document.getElementById("closeModalBtn2")];
+  const closeBtns = [
+    document.getElementById("closeModalBtn"),
+    document.getElementById("closeModalBtn2")
+  ];
 
   function openModal(card) {
     modalTitle.textContent = card.getAttribute("data-title") || "Serviço";
     modalContent.textContent = card.getAttribute("data-content") || "";
 
-    modal.classList.add("active");        // mostra o backdrop (display:flex)
-    setTimeout(() => modalBox.classList.add("visible"), 10); // animação de entrada
+    modal.classList.add("active");
+    setTimeout(() => modalBox.classList.add("visible"), 10);
   }
 
   function closeModal() {
-    modalBox.classList.remove("visible"); // inicia animação de saída
+    modalBox.classList.remove("visible");
     setTimeout(() => modal.classList.remove("active"), 200);
   }
 
@@ -193,7 +127,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  closeBtns.forEach((btn) => btn.addEventListener("click", closeModal));
+  closeBtns.forEach((btn) => {
+    if (btn) btn.addEventListener("click", closeModal);
+  });
 
   modal.addEventListener("click", (e) => {
     if (e.target === modal) closeModal();
