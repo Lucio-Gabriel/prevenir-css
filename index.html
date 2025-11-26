@@ -1244,6 +1244,15 @@
         </div>
       </div>
     </div>
+
+    <!--Não exebi o mapa no IE-->
+    <script>
+      var isIE = /MSIE|Trident/.test(navigator.userAgent);
+
+      if (isIE) {
+        document.querySelector(".location-map-inner").style.display = "none";
+      }
+    </script>
   
     <div class="location-shell location-info-wrapper">
       <div class="location-info-card">

@@ -141,3 +141,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 })();
+
+// Não exebi o mapa no IE
+var isIE = /MSIE|Trident/.test(navigator.userAgent);
+
+if (isIE) {
+  document.querySelector(".location-map-inner").style.display = "none";
+}
