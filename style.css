@@ -2246,3 +2246,12 @@
       width: calc(25% - 2.5rem);
     }
   }
+
+@media (max-width: 768px) {
+  .termo-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 12px;
+  }
+}
