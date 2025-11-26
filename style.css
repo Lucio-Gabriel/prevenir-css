@@ -14,7 +14,7 @@
   background: url('https://images.unsplash.com/photo-1667384449582-3ecd5717fa19?fm=jpg&q=60&w=3000')
     center center / cover no-repeat;
   z-index: 0; 
-  height: 675px;
+  height: 663px;
 }
 
 .hero-overlay-bg::before {
@@ -597,7 +597,7 @@
 
   @media (min-width: 1024px) {
     .stats-display-section {
-      margin-left: 21.25rem; /* equivalente a lg:ml-[340px] */
+      margin-left: 31%; /* equivalente a lg:ml-[340px] */
       margin-top: -8rem;
     }
   }
