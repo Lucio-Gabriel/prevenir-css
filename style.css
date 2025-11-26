@@ -10,11 +10,24 @@
 }
 
 .hero-overlay-bg {
-background-image: linear-gradient(rgba(3, 29, 78, 0.7)), url('https://images.unsplash.com/photo-1667384449582-3ecd5717fa19?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=jpg&q=60&w=3000');
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1667384449582-3ecd5717fa19?fm=jpg&q=60&w=3000')
+    center center / cover no-repeat;
+  z-index: 0; 
 }
+
+.hero-overlay-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(43, 59, 100, 0.9); 
+  display: block;
+  z-index: -1; 
+}
+
 .header-wrapper {
     width: 100%;
     background-color: #fff;
