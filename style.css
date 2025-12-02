@@ -2410,3 +2410,14 @@
   }
 }
 
+.location-info-details {
+  margin-top: 1rem; /* deixa o texto abaixo do título */
+}
+
+.location-info-details p {
+  color: #000; /* preto */
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.4rem;
+  text-align: justify;
+}
