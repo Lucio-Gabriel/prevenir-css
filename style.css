@@ -2279,3 +2279,24 @@
   width: fit-content;
   padding: 0.45rem 0.9rem;
 }
+
+.services-card-list {
+  color: #4b5563;
+  margin: 0;
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  text-align: justify;
+  flex-grow: 1;
+}
+
+.services-card-list li {
+  line-height: 1.5;
+  position: relative;
+}
+
+.services-card-list li::marker {
+  color: var(--primary-red); /* cor da sua identidade visual */
+  font-weight: bold;
+}
