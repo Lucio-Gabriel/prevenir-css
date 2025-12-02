@@ -1625,12 +1625,12 @@
     }
 
     document.getElementById("accept-cookies").onclick = function () {
-      setCookie("cookie_consent", "accepted", 365);
+      setCookie("cookie_consent", "accepted", 1);
       hideBanner();
     };
 
     document.getElementById("decline-cookies").onclick = function () {
-      setCookie("cookie_consent", "declined", 365);
+      setCookie("cookie_consent", "declined", 1);
       hideBanner();
     };
   });
