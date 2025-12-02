@@ -2301,4 +2301,83 @@
   font-weight: bold;
 }
 
+/* CARD ESPECIAL — OCUPA 100% DA LARGURA */
+.services-card-full {
+  width: 100%;
+  max-width: 100%;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+  border: 1px solid #f1f5f9;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+
+  margin-top: 2rem; /* opcional */
+}
+
+/* HOVER */
+.services-card-full:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.18);
+}
+
+/* ÍCONE */
+.services-card-full .services-card-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1.25rem;
+  background-color: var(--primary-red);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 1.5rem;
+
+  transition: transform 0.3s ease;
+}
+
+/* ÍCONE HOVER */
+.services-card-full:hover .services-card-icon {
+  transform: scale(1.1);
+}
+
+.services-card-full .services-card-icon svg {
+  color: #fff;
+}
+
+/* TÍTULO */
+.services-card-full .services-card-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+/* TEXTO */
+.services-card-full .services-card-text {
+  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+  word-break: break-word;
+  flex-grow: 1;
+}
+
+/* RESPOSIVIDADE EM TELAS GRANDES */
+@media (min-width: 1024px) {
+  .services-card-full {
+    padding: 3rem;
+    width: 100%;
+  }
+
+  .services-card-full .services-card-title {
+    font-size: 1.5rem;
+  }
+}
 
