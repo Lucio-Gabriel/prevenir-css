@@ -895,6 +895,7 @@
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 1rem;
+    flex-grow: 1;
   }
 
   .differential-card-cta {
@@ -2254,4 +2255,25 @@
     justify-content: center;
     margin: 12px;
   }
+}
+
+.differential-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.differential-card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* faz o body ocupar todo o espaço */
+}
+
+.differential-card-text {
+  flex-grow: 1; /* empurra o botão para baixo */
+}
+
+.differential-card-cta {
+  margin-top: auto;  
+  width: fit-content;
+  padding: 0.45rem 0.9rem;
 }
