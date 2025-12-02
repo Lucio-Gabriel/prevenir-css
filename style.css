@@ -1077,6 +1077,15 @@
     margin-bottom: 0.75rem;
   }
 
+  .services-card-two {
+    color: #4b5563;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+    word-break: break-word;
+    text-align: justify;
+    font-weight: 300;
+  }
+
   .services-card-text {
     color: #4b5563;
     margin-bottom: 1rem;
